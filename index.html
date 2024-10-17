@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon API Testing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./styles/style.css" rel="stylesheet" />
+
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="./scripts/script.js"></script>
+  </head>
+
+  <body>
+    <head class="head">
+      <div class="hero">
+        <h1 class="hero__title">Testing PokeApi</h1>
+        <p class="hero__description hero__description--large">
+          Find out what Pokemon is the same height and weight as you!
+        </p>
+      </div>
+    </head>
+
+    <body class="body">
+      <main class="main">
+        <section class="form-section">
+          <div class="form-section__title-wrapper">
+            <h2 class="form-section__title">Form title</h2>
+            <p class="form-section__description">
+              Enter your details below to find out what pokemon you are.
+            </p>
+          </div>
+
+          <form class="form">
+            <fieldset class="form__fieldset">
+              <label class="form__label">
+                <span class="form__label-text">Height</span>
+                <div class="form__input-wrapper">
+                  <input
+                    class="form__input-number"
+                    type="number"
+                    name="heightFeet"
+                    required
+                  />
+                  <span class="form__label-text--suffix">feet</span>
+                </div>
+                <div class="form__input-wrapper">
+                  <input
+                    class="form__input-number"
+                    type="number"
+                    name="heightInches"
+                    required
+                  />
+                  <span class="form__label-text--suffix">inches</span>
+                </div>
+              </label>
+
+              <label class="form__label">
+                <span class="form__label-text">Weight</span>
+                <div class="form__input-wrapper">
+                  <input
+                    class="form__input-number"
+                    type="number"
+                    name="weight"
+                    required
+                  />
+                  <span class="form__label-text--suffix">lbs</span>
+                </div>
+              </label>
+            </fieldset>
+
+            <button class="form__submit-btn" type="submit">Submit</button>
+          </form>
+        </section>
+
+        <section class="results">
+          <h2 class="results__title">Results</h2>
+					<p class="results__message">No results...</p>
+
+          <div class="results__container">
+          </div>
+        </section>
+      </main>
+    </body>
+  </body>
+</html>
