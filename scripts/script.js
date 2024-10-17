@@ -56,6 +56,7 @@ async function fetchPokemon(userHeight, userWeight) {
   }
 }
 
+const resultsSection = document.getElementById("results");
 const resultsContainer = document.querySelector(".results__container");
 const resultsMessage = document.querySelector(".results__message");
 
@@ -65,13 +66,14 @@ function renderResults(pokemonResults) {
   if (pokemonResults.length === 0) {
     resultsMessage.classList.remove("results__message--hidden");
   } else {
-    console.log("hide", resultsMessage);
     resultsMessage.classList.add("results__message--hidden");
   }
-
+  
   pokemonResults.forEach((result) => {
     buildResultsCard(result);
   });
+  
+  resultsSection.scrollIntoView({block: "end"});
 }
 
 function buildResultsCard(result) {
