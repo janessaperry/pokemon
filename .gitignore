@@ -1,4 +1,4 @@
 .DS_Store
 *.css.map
 .vscode
-./scripts/test-script.js
+/scripts/test-script.js
